@@ -1,59 +1,45 @@
-# Failure Prediction using Machine Learning
+# Predictive Maintenance Project
 
-This repository contains a Python code for predicting failures using machine learning techniques. It includes data preprocessing, exploratory data analysis (EDA), feature selection, model training, hyperparameter tuning, and evaluation.
+This project focuses on predicting failures in a system using machine learning techniques for predictive maintenance. The dataset used contains information about various metrics and failure events.
 
-## Dataset
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Data Preprocessing](#data-preprocessing)
+3. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+4. [Feature Engineering](#feature-engineering)
+5. [Undersampling](#undersampling)
+6. [Model Evaluation](#model-evaluation)
+7. [Hyperparameter Tuning](#hyperparameter-tuning)
+8. [Model Comparison](#model-comparison)
+9. [Best Model](#best-model)
+10. [Receiver Operating Characteristic (ROC) Curve](#receiver-operating-characteristic-roc-curve)
 
-The dataset used for this project is stored in the `failure.csv` file. It contains the following columns:
-
-- `attribute1`, `attribute2`, `attribute3`, `attribute4`, `attribute5`, `attribute6`: Numerical features.
-- `date`: Date of data collection.
-- `device`: Device identifier.
-- `failure`: Target variable (0 for non-failure, 1 for failure).
-
-## Exploratory Data Analysis (EDA)
-
-The EDA process involves the following steps:
-
-- Summarizing the dataset, including the number of rows and columns, data types, and missing values.
-- Visualizing the distribution of the target variable with respect to other features.
-- Plotting pair plots and histograms for selected attributes.
-- Visualizing the failure over time by month and week.
-- Creating a correlation matrix to understand feature relationships.
+## Introduction
+Describe the goal of the project and the problem you are trying to solve. Include information about the dataset and its features.
 
 ## Data Preprocessing
+Discuss the steps taken for data preprocessing, such as handling missing values, removing outliers, and converting data types.
 
-Data preprocessing steps include:
+## Exploratory Data Analysis (EDA)
+Provide visualizations and insights obtained from exploring the dataset. This section helps in understanding the distribution of features and their relationships.
 
-- Converting the `date` column to a datetime format.
-- Extracting additional date-related features such as `month`, `week`, `day_of_week`, `day_of_month`, and `is_weekend`.
-- Handling class imbalance by using random under-sampling.
+## Feature Engineering
+Explain how new features are created or existing features are transformed to improve model performance.
 
-## Feature Selection
-
-Feature selection involves identifying and selecting the most important features using machine learning models (e.g., RandomForest). The selected features are used for model training.
-
-## Model Selection and Hyperparameter Tuning
-
-The code includes the following machine learning models:
-
-- GradientBoosting
-- RandomForest
-- AdaBoost
-- ExtraTrees
-- DecisionTree
-
-Hyperparameter tuning is performed using the Optuna library. For models with an accuracy greater than 70%, hyperparameters are optimized to achieve the best results.
+## Undersampling
+Describe the undersampling technique used to address class imbalance in the dataset.
 
 ## Model Evaluation
+Evaluate multiple classifiers using various machine learning algorithms. Metrics such as accuracy, precision, recall, and F1 score are calculated.
 
-Model evaluation includes metrics such as accuracy, precision, recall, and F1-score. Classification reports and confusion matrices are generated to assess model performance.
+## Hyperparameter Tuning
+Optimize hyperparameters for selected models to improve their performance.
 
-## Visualizations
+## Model Comparison
+Compare the performance of different models and their confusion matrices.
 
-The code includes various visualizations, such as pair plots, histograms, line plots, and heatmaps, to better understand the data and model performance.
+## Best Model
+Identify the best-performing model based on evaluation metrics.
 
-## Prerequisites
-
-- Python 3.x
-- Required libraries: pandas, matplotlib, numpy, seaborn, scikit-learn, optuna, imbalanced-learn.
+## Receiver Operating Characteristic (ROC) Curve
+Visualize the ROC curve and calculate the area under the curve (AUC) for one of the models.
